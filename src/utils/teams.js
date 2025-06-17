@@ -6,6 +6,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/c/c9/Boca_escudo.png",
+    selected: false,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const TEAMS = [
     founded: 1901,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_River_Plate.png",
+    selected: false,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg/1945px-Escudo_del_Club_Atl%C3%A9tico_Independiente.svg.png",
+    selected: false,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const TEAMS = [
     founded: 1903,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escudo_de_Racing_Club_%282014%29.svg/1200px-Escudo_de_Racing_Club_%282014%29.svg.png",
+    selected: false,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const TEAMS = [
     founded: 1908,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png",
+    selected: false,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const TEAMS = [
     founded: 1910,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/3/36/Escudo_V%C3%A9lez_Sarsfield.png",
+    selected: false,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Escudo_de_Estudiantes_de_La_Plata.svg/1246px-Escudo_de_Estudiantes_de_La_Plata.svg.png",
+    selected: false,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const TEAMS = [
     founded: 1903,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Escudo_del_Club_Atl%C3%A9tico_Newell%27s_Old_Boys_de_Rosario.svg/1665px-Escudo_del_Club_Atl%C3%A9tico_Newell%27s_Old_Boys_de_Rosario.svg.png",
+    selected: false,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ const TEAMS = [
     founded: 1889,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/RC-escudo.png",
+    selected: false,
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ const TEAMS = [
     founded: 1887,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/GIM-escudo.png",
+    selected: false,
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ const TEAMS = [
     founded: 1913,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/TAL-escudo.png",
+    selected: false,
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/8/85/Escudo_Oficial_del_Club_Atl%C3%A9tico_Belgrano.png",
+    selected: false,
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ const TEAMS = [
     founded: 1918,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/6/6d/Escudo_Instituto_Atletico_Central_Cordoba.png",
+    selected: false,
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ const TEAMS = [
     founded: 1904,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Escudo_de_la_Asociaci%C3%B3n_Atl%C3%A9tica_Argentinos_Juniors.svg/2045px-Escudo_de_la_Asociaci%C3%B3n_Atl%C3%A9tica_Argentinos_Juniors.svg.png",
+    selected: false,
   },
   {
     id: 15,
@@ -118,6 +132,7 @@ const TEAMS = [
     founded: 1902,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/TIG-escudo.png",
+    selected: false,
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/9/9e/Escudo_platense.png",
+    selected: false,
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ const TEAMS = [
     founded: 1904,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Barracas_central_logo.svg/1200px-Barracas_central_logo.svg.png",
+    selected: false,
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ const TEAMS = [
     founded: 1908,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/HUR-escudo.png",
+    selected: false,
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ const TEAMS = [
     founded: 1915,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/2/24/Escudo_de_Lan%C3%BAs_2025.png",
+    selected: false,
   },
   {
     id: 20,
@@ -158,6 +177,7 @@ const TEAMS = [
     founded: 1896,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/4/42/Escudo_de_Banfield.png",
+    selected: false,
   },
   {
     id: 21,
@@ -166,6 +186,7 @@ const TEAMS = [
     founded: 1935,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/1/15/Escudo_defensa_y_justicia.png",
+    selected: false,
   },
   {
     id: 22,
@@ -174,6 +195,7 @@ const TEAMS = [
     founded: 1907,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/d/d8/Union_de_Santa_Fe.png",
+    selected: false,
   },
   {
     id: 23,
@@ -182,6 +204,7 @@ const TEAMS = [
     founded: 1905,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/3/36/Escudo_del_Club_Atl%C3%A9tico_Col%C3%B3n.png",
+    selected: false,
   },
   {
     id: 24,
@@ -190,6 +213,7 @@ const TEAMS = [
     founded: 1904,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Escudo_del_Club_Ferro_Carril_Oeste.svg/2048px-Escudo_del_Club_Ferro_Carril_Oeste.svg.png",
+    selected: false,
   },
   {
     id: 25,
@@ -198,6 +222,7 @@ const TEAMS = [
     founded: 1921,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Escudo_del_Club_Deportivo_Godoy_Cruz_Antonio_Tomba.svg/2048px-Escudo_del_Club_Deportivo_Godoy_Cruz_Antonio_Tomba.svg.png",
+    selected: false,
   },
   {
     id: 26,
@@ -206,6 +231,7 @@ const TEAMS = [
     founded: 1907,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Escudo_de_San_Martin_de_San_Juan.svg/1200px-Escudo_de_San_Martin_de_San_Juan.svg.png",
+    selected: false,
   },
   {
     id: 27,
@@ -214,6 +240,7 @@ const TEAMS = [
     founded: 1902,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Escudo_del_Club_Atletico_Tucuman.svg/1746px-Escudo_del_Club_Atletico_Tucuman.svg.png",
+    selected: false,
   },
   {
     id: 28,
@@ -222,6 +249,7 @@ const TEAMS = [
     founded: 1909,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/6/63/San_martin_tucuman.png",
+    selected: false,
   },
   {
     id: 29,
@@ -230,6 +258,7 @@ const TEAMS = [
     founded: 1913,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/1017px-Escudo_del_Club_Independiente_Rivadavia.svg.png",
+    selected: false,
   },
   {
     id: 30,
@@ -238,6 +267,7 @@ const TEAMS = [
     founded: 1911,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2024/06/Escudo_del_Club_Atletico_Sarmiento_de_Junin.svg-1024x1005.png",
+    selected: false,
   },
   {
     id: 31,
@@ -246,6 +276,7 @@ const TEAMS = [
     founded: 1931,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Escudo_del_Club_Deportivo_Riestra.svg/1200px-Escudo_del_Club_Deportivo_Riestra.svg.png",
+    selected: false,
   },
   {
     id: 32,
@@ -254,6 +285,7 @@ const TEAMS = [
     founded: 1913,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2025/01/ALD-Escudo.png",
+    selected: false,
   },
   {
     id: 33,
@@ -262,6 +294,7 @@ const TEAMS = [
     founded: 1919,
     image:
       "https://www.ligaprofesional.ar/wp-content/uploads/2025/01/Central-Cordoba-Escudo-2025.png",
+    selected: false,
   },
 ];
 
