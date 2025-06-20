@@ -7,25 +7,48 @@ function App() {
   const [teams, setTeams] = useState(null);
   const [comboCard, setComboCard] = useState([]);
 
+  const checkWinner = (teams, combo) => {
+    if (combo.length < 2) return;
+    setTimeout(() => {
+      if (combo.length === 2) {
+        const isWin = combo[0].name === combo[1].name;
+        const newAllTeams = teams.map((team) => {
+          if (isWin) {
+            return {
+              ...team,
+              selected: false,
+              win: isWin && team.name === combo[0].name ? true : team.win,
+            };
+          } else {
+            return { ...team, selected: false };
+          }
+        });
+
+        setTeams(newAllTeams);
+        setComboCard([]);
+      } else {
+        return;
+      }
+    }, 500);
+  };
+
   const selectCard = (team) => {
-    if (team.selected || comboCard.length === 2) return;
+    if (team.selected || team.win || comboCard.length === 2) return;
 
     const newAllTeams = teams.map((teamCard) => {
       if (teamCard.id === team.id) {
-        return { ...teamCard, selected: !teamCard.selected, win: true };
+        return { ...teamCard, selected: !teamCard.selected };
       }
       return teamCard;
     });
     setTeams(newAllTeams);
 
-    const cardSelected = newAllTeams.find((team) => team.selected);
-    let newComboCard = [];
+    const cardsSelected = newAllTeams.filter((team) => team.selected);
     if (comboCard.length < 2) {
-      newComboCard = [...comboCard, cardSelected];
-      setComboCard(newComboCard);
+      setComboCard(cardsSelected);
     }
 
-    // checkWinner(newComboCard);
+    checkWinner(newAllTeams, cardsSelected);
   };
 
   useEffect(() => {
@@ -54,7 +77,13 @@ function App() {
           teams.map((team, i) => (
             <button>
               <article
-                className={`size-15 sm:size-20  p-2 rounded-md sm:rounded-xl border-2 hover:scale-105 transition-scale duration-200`}
+                className={`size-15 sm:size-20 ${
+                  team.win
+                    ? "bg-green-300 border-green-400 hover:border-green-500 cursor-no-drop"
+                    : "bg-white border-gray-300 hover:border-gray-500 cursor-pointer"
+                } p-2 rounded-md sm:rounded-xl border-2 ${
+                  team.selected && "scale-110 border-gray-500"
+                } transition-scale duration-150`}
                 onClick={() => selectCard(team)}
               >
                 <img
@@ -62,7 +91,7 @@ function App() {
                   src={team.image}
                   alt={team.name}
                   className={`size-full object-contain ${
-                    team.selected ? "block" : "hidden"
+                    team.selected || team.win ? "block" : "hidden"
                   }`}
                   loading="lazy"
                 />
