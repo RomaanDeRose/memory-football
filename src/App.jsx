@@ -82,7 +82,7 @@ function App() {
                     ? "bg-green-300 border-green-400 hover:border-green-500 cursor-no-drop"
                     : "bg-white border-gray-300 hover:border-gray-500 cursor-pointer"
                 } p-2 rounded-md sm:rounded-xl border-2 ${
-                  team.selected && "scale-110 border-gray-500"
+                  team.selected && "scale-110 sm:scale-105 border-gray-500"
                 } transition-scale duration-150`}
                 onClick={() => selectCard(team)}
               >
