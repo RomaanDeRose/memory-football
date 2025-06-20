@@ -5,16 +5,27 @@ import { shuffle } from "./utils/shuffle";
 
 function App() {
   const [teams, setTeams] = useState(null);
+  const [comboCard, setComboCard] = useState([]);
 
   const selectCard = (team) => {
+    if (team.selected || comboCard.length === 2) return;
+
     const newAllTeams = teams.map((teamCard) => {
       if (teamCard.id === team.id) {
-        return { ...teamCard, selected: !teamCard.selected };
+        return { ...teamCard, selected: !teamCard.selected, win: true };
       }
       return teamCard;
     });
-
     setTeams(newAllTeams);
+
+    const cardSelected = newAllTeams.find((team) => team.selected);
+    let newComboCard = [];
+    if (comboCard.length < 2) {
+      newComboCard = [...comboCard, cardSelected];
+      setComboCard(newComboCard);
+    }
+
+    // checkWinner(newComboCard);
   };
 
   useEffect(() => {
@@ -27,6 +38,8 @@ function App() {
 
     setTeams(teamsForGame);
   }, []);
+
+  console.log(comboCard);
 
   return (
     <div className="w-full h-screen p-6 flex flex-col items-center justify-center">
@@ -41,7 +54,7 @@ function App() {
           teams.map((team, i) => (
             <button>
               <article
-                className="size-16 sm:size-20 p-2 rounded-md sm:rounded-xl border-2 border-gray-200 cursor-pointer hover:scale-105 hover:border-gray-400 transition-scale duration-200"
+                className={`size-15 sm:size-20  p-2 rounded-md sm:rounded-xl border-2 hover:scale-105 transition-scale duration-200`}
                 onClick={() => selectCard(team)}
               >
                 <img
