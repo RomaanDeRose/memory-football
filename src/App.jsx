@@ -7,6 +7,7 @@ import Teams from "./components/Teams";
 function App() {
   const [teams, setTeams] = useState([]);
   const [comboCard, setComboCard] = useState([]);
+  const [attemps, setAttemps] = useState(0);
 
   const actualizeTeams = () => {
     const randomTeams = randomTeam(TEAMS);
@@ -23,6 +24,7 @@ function App() {
     if (combo.length < 2) return;
     setTimeout(() => {
       if (combo.length === 2) {
+        setAttemps(attemps + 1);
         const isWin = combo[0].name === combo[1].name;
         const newAllTeams = teams.map((team) => {
           if (isWin) {
@@ -91,7 +93,7 @@ function App() {
       <p className="text-lg w-90 text-blue-400 font-medium text-balance text-center mb-10 leading-6">
         Juego de la memoria modo fútbol argentino
       </p>
-      <Teams teams={teams} selectCard={selectCard} />
+      <Teams teams={teams} attemps={attemps} selectCard={selectCard} />
       {isGameEnd && (
         <button
           className="bg-blue-500 text-white text-xl uppercase font-medium px-8 py-3 rounded-xl cursor-pointer mt-8 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/40 active:scale-95"
