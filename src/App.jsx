@@ -29,7 +29,7 @@ function App() {
       } else {
         return;
       }
-    }, 500);
+    }, 300);
   };
 
   const selectCard = (team) => {
