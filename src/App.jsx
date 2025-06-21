@@ -26,8 +26,6 @@ function App() {
 
         setTeams(newAllTeams);
         setComboCard([]);
-      } else {
-        return;
       }
     }, 300);
   };
